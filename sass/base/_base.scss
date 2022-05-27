@@ -1,0 +1,22 @@
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $inter, $sans-serif;
+  font-size: 100%;
+  background-color: var(--theme);
+  color: var(--theme-font);
+
+  @include large-phones {
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}

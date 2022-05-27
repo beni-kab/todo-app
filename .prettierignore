@@ -1,0 +1,9 @@
+**/node_modules
+**/tests/output
+**/package.json
+**/*.ejs
+.changeset/*.md
+**/.next
+**/.storybook
+**/.vscode
+**/.tests

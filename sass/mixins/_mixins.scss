@@ -1,0 +1,11 @@
+@mixin small-phones {
+  @media only screen and (max-width: $small-phones) {
+    @content;
+  }
+}
+
+@mixin large-phones {
+  @media only screen and (max-width: $large-phones) {
+    @content;
+  }
+}
