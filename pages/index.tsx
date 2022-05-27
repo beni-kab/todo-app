@@ -15,7 +15,7 @@ import styles from '@/sass/pages/home.module.scss';
 export default function index() {
   const { t } = useTranslation('home', { useSuspense: false });
   return (
-    <main className={styles.home}>
+    <main className={styles.home} data-testid="index">
       <Typography
         text={t('text')}
         fontSize={FontSize.Medium}
