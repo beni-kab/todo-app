@@ -14,9 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
 
   eslint:
     name: 'Eslint pipeline'
@@ -28,12 +25,6 @@ jobs:
         run: |
           echo "Installing dependencies"
           yarn install
-
-      - name: Production Build
-        run: |
-          yarn run build
-        env:
-          CI: false
 
       - name: Eslint check
         run: |
