@@ -6,12 +6,10 @@ export interface IPanel {
   children: React.ReactNode;
 }
 
-const Panel: FC<IPanel> = ({ children }: IPanel) => {
-  return (
-    <div data-testid="panel" className={styles['panel']}>
+const Panel: FC<IPanel> = ({ children }: IPanel) => (
+    <div data-testid="panel" className={styles.panel}>
       {children}
     </div>
   );
-};
 
 export { Panel };

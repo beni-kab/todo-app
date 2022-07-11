@@ -1,4 +1,4 @@
-name: Continous Integration
+name: Continious Integration
 
 on:
   push:
@@ -17,11 +17,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14.x'
-      - run: yarn run eslint . --ext .ts,.tsx
+
   eslint:
     name: 'Eslint pipeline'
     runs-on: ubuntu-latest
-    needs: setup
+    needs: Setup
     steps:
-      - uses: actions/checkout@v2
       - run: yarn check-lint
