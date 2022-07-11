@@ -1,4 +1,4 @@
-name: CI/CD
+name: Continious Integration / Continious Deployment
 
 on:
   push:
@@ -28,3 +28,8 @@ jobs:
         run: |
           echo "Installing dependencies"
           yarn install
+
+      - name: Eslint check
+        run: |
+          echo "Checking Eslint"
+          yarn check-lint
