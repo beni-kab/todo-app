@@ -32,13 +32,13 @@
     "react-i18next": "^11.15.6",
     "react-redux": "^7.2.6",
     "redux": "^4.1.2",
-    "sass": "^1.49.9",
-    "@testing-library/jest-dom": "^5.16.2"
+    "sass": "^1.49.9"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@next/eslint-plugin-next": "^12.2.2",
     "@storybook/addon-actions": "^6.4.18",
     "@storybook/addon-essentials": "^6.4.18",
     "@storybook/addon-links": "^6.4.18",
@@ -70,7 +70,8 @@
     "jsdom-global": "^3.0.2",
     "prettier": "^2.5.1",
     "storybook-addon-performance": "^0.16.1",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "@testing-library/jest-dom": "^5.16.2"
   },
   "peerDependencies": {
     "webpack": "^5.68.0"
