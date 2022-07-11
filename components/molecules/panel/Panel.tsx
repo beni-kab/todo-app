@@ -7,9 +7,9 @@ export interface IPanel {
 }
 
 const Panel: FC<IPanel> = ({ children }: IPanel) => (
-    <div data-testid="panel" className={styles.panel}>
-      {children}
-    </div>
-  );
+  <div data-testid="panel" className={styles.panel}>
+    {children}
+  </div>
+);
 
 export { Panel };
