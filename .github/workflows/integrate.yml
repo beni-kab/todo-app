@@ -29,6 +29,12 @@ jobs:
           echo "Installing dependencies"
           yarn install
 
+      - name: Production Build
+        run: |
+          yarn run build
+        env:
+          CI: false
+
       - name: Eslint check
         run: |
           echo "Checking Eslint"
