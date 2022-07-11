@@ -1,10 +1,6 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 
-import { Typography } from '@/components/atoms/typography';
 import { Panel } from '@/components/molecules/panel';
-import { FontSize, FontWeight } from '@/constants';
-
 import styles from '@/sass/pages/home.module.scss';
 
 /**
@@ -13,28 +9,10 @@ import styles from '@/sass/pages/home.module.scss';
  */
 
 export default function index() {
-  const { t } = useTranslation('home', { useSuspense: false });
   return (
     <main className={styles.home} data-testid="index">
-      <Typography
-        text={t('text')}
-        fontSize={FontSize.Medium}
-        fontWeight={FontWeight.SemiBold}
-      />
-      <br />
       <Panel>
-        <Typography
-          text="Learn CI/CD"
-          fontSize={FontSize.XMedium}
-          fontWeight={FontWeight.Light}
-        />
-      </Panel>
-      <Panel>
-        <Typography
-          text="Deploy app to Github"
-          fontSize={FontSize.XMedium}
-          fontWeight={FontWeight.Light}
-        />
+        <h3>This is a super cool project</h3>
       </Panel>
     </main>
   );

@@ -4,13 +4,13 @@ import { render, screen } from '../../../tests/test-utils';
 
 import { Panel } from '.';
 
-const props = {
-  children: <></>,
-};
-
 describe('Panel', () => {
-  it('Component renders correctly', function () {
-    render(<Panel {...props} />);
+  it('Component renders correctly', () => {
+    render(
+      <Panel>
+        <p>panel content</p>
+      </Panel>
+    );
     const component = screen.getByTestId('panel');
     expect(component).toBeInTheDocument();
   });

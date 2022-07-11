@@ -1,7 +1,7 @@
-name: Continous Integration
+name: CI/CD
 
 on:
-  pull_request:
+  push:
     branches:
       - '**'
 
@@ -11,14 +11,62 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-      - run: yarn
-  eslint:
-    name: 'Eslint pipeline'
+
+  tests:
+    name: 'Integration tests'
     runs-on: ubuntu-latest
     needs: setup
     steps:
       - uses: actions/checkout@v2
-      - run: yarn check-lint
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies"
+          yarn install
+      - run: |
+          echo "Running tests"
+          yarn test
+
+  eslint:
+    name: 'Eslint Pipeline'
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies"
+          yarn install
+      - name: Eslint check
+        run: |
+          echo "Checking Eslint"
+          yarn run check-lint
+
+  format:
+    name: 'Format Pipeline'
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies"
+          yarn install
+      - name: Format check
+        run: |
+          echo "Checking Format"
+          yarn run check-format
+
+  types:
+    name: 'Types Pipeline'
+    runs-on: ubuntu-latest
+    needs: setup
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies"
+          yarn install
+      - name: Types check
+        run: |
+          echo "Checking Typescript"
+          yarn run check-types
