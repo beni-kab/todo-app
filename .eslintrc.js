@@ -10,6 +10,7 @@ module.exports = {
     'airbnb',
     'prettier',
     'plugin:storybook/recommended',
+    'plugin:@next/next/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -32,6 +33,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'import/no-extraneous-dependencies': 'off',
   },
   settings: {
     react: {
