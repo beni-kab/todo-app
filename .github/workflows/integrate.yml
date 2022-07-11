@@ -32,4 +32,4 @@ jobs:
       - name: Eslint check
         run: |
           echo "Checking Eslint"
-          yarn check-lint
+          yarn run check-lint
