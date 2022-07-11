@@ -14,10 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies
-        run: |
-          echo "Installing dependencies"
-          yarn install
 
   tests:
     name: 'Integration tests'
@@ -25,6 +21,10 @@ jobs:
     needs: setup
     steps:
       - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies"
+          yarn install
       - run: |
           echo "Running tests"
           yarn test
@@ -35,6 +35,10 @@ jobs:
     needs: setup
     steps:
       - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies"
+          yarn install
       - name: Eslint check
         run: |
           echo "Checking Eslint"
